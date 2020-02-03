@@ -1,0 +1,173 @@
+
+//variables
+$mainFont: 'Poppins', sans-serif;
+
+//primary
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+//neutral
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+body {
+    background-color: $veryLightGray;
+    font-family: $mainFont;
+
+    .info {
+        text-align: center;
+
+        h1 {
+            color: $veryDarkBlue;
+            font-size: 1.8rem;
+            font-weight: 200;
+            margin: auto;
+        }
+
+        #sub {
+            font-weight: 600; 
+            margin-bottom: 18px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        color: $grayishBlue;
+        margin: auto;
+    }
+
+    h2 {
+        color: $veryDarkBlue;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        
+    }
+
+    .cards {
+
+        .card {
+        height: 184px;
+        width: 284px;
+        box-shadow: 0px 16px 16px 1px hsl(234, 12%, 90%);
+        border-top: 4px;
+        border-top-style: solid;
+        border-radius: 6px;
+        padding: 2rem;
+        }
+
+        #supervisor {
+            border-color: $Cyan;
+        }
+
+        #teamBuilder {
+            border-color: $Red;
+        }
+
+        #karma {
+            border-color: $Orange;
+        }
+
+        #calculator {
+            border-color: $Blue;
+        }
+
+        img {
+            position: relative;
+            top: 30px;
+            left: 220px;
+        }
+    }
+
+    @media screen and (max-width: 1216px) {
+
+            .info {
+                width: 25rem;
+                margin: 7rem auto;
+
+                #sub {
+                    font-size: 1.9rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .cards {
+                display: block;
+                margin-bottom: 5rem;
+                .card {
+                    width: 284px;
+                    height: 184px;
+                    margin: 2rem auto;
+                }
+            }
+    }
+
+    @media screen and (min-width: 1216px) {
+
+        .info {
+            margin: 64px auto 64px auto;
+            width: 35rem;
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            #sub {
+                font-size: 2.4rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: auto 348px 32px 348px 32px 348px auto;
+            grid-template-rows: 142px 108px 32px 108px 142px;
+            margin-bottom: 12rem;
+
+            #teamBuilder {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 4;
+                grid-column-end: 4;
+            }
+
+            #karma {
+                grid-row-start: 4;
+                grid-row-end: 5;
+                grid-column-start: 4;
+                grid-column-end: 4;
+            }
+
+            #calculator {
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 6;
+                grid-column-end: 6;
+            }
+
+            #supervisor {
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 2;
+                grid-column-end: 2;
+            }
+
+        }
+
+    }
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+}
+
